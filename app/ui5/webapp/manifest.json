@@ -1,85 +1,80 @@
 {
-    "_version": "1.8.0",
-    "sap.app": {
-        "id": "treinamento.ui5",
-        "type": "application",
-        "i18n": "i18n/i18n.properties",
-        "title": "{{appTitle}}",
-        "description": "{{appDescription}}",
-        "applicationVersion": {
-            "version": "1.0.0"
-        }
-    },
-    "sap.ui": {
-        "technology": "UI5",
-        "deviceTypes": {
-            "desktop": true,
-            "tablet": true,
-            "phone": true
-        }
-    },
-    "sap.ui5": {
-        "rootView": {
-            "viewName": "treinamento.ui5.view.App",
-            "type": "XML",
-            "async": true,
-            "id": "app"
-        },
-        "dependencies": {
-            "minUI5Version": "1.30",
-            "libs": {
-                "sap.m": {}
-            }
-        },
-        "models": {
-            "i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/i18n.properties"
-            },
-            "resources": {
-                "css": [{
-                    "uri": "css/style.css"
-                }]
-            },
-
-            "produto": {
-                "type": "sap.ui.model.json.JSONModel",
-                "uri": "model/Produtos.json"
-            }
-        },
-        "routing": {
-            "config": {
-                "routerClass": "sap.m.routing.Router",
-                "viewType": "XML",
-                "viewPath": "treinamento.ui5.view",
-                "controlId": "app",
-                "controlAggregation": "pages",
-                "async": true
-            },
-            "routes": [{
-                    "name": "Page1",
-                    "pattern": "",
-                    "target": ["Page1"]
-                },
-                {
-                    "name": "Page2",
-                    "pattern": "page2/{value}",
-                    "target": ["Page2"]
-                }
-            ],
-            "targets": {
-                "Page1": {
-                    "viewType": "XML",
-                    "viewLevel": 0,
-                    "viewName": "Page1"
-                },
-                "Page2": {
-                    "viewType": "XML",
-                    "viewLevel": 0,
-                    "viewName": "Page2"
-                }
-            }
-        }
-
+  "_version": "1.8.0",
+  "sap.app": {
+    "id": "treinamento.ui5",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
     }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "treinamento.ui5.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.30",
+      "libs": {
+        "sap.m": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      },
+      "produto": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/Produtos.json"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "treinamento.ui5.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+					"name": "Page1",
+					"pattern": "",
+					"target": ["Page1"]
+				},
+				{
+					"name": "Page2",
+					"pattern": "page2/{value}",
+					"target": ["Page2"]
+				}
+      ],
+      "targets": {
+        "Page1": {
+					"viewType": "XML",
+					"viewLevel": 0,
+					"viewName": "Page1"
+        },
+        "Page2": {
+					"viewType": "XML",
+					"viewLevel": 0,
+					"viewName": "Page2"
+				}
+      }
+    }
+
+  }
 }
