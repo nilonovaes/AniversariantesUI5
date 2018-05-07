@@ -1,0 +1,19 @@
+{
+  "name": "heroku",
+  "version": "1.0.0",
+  "description": "Heroku Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consign": "^0.1.6",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "express-validator": "^5.1.2"
+  }
+}
